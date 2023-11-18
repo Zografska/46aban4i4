@@ -142,3 +142,54 @@ body {
   text-decoration: underline;
   color: #ff66cc;
 }
+
+/* Existing Styles */
+/* ... (keep your existing styles here) ... */
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .profile-container, .app-bar {
+        max-width: 95%; /* Adjust width for smaller screens */
+        margin: 10px auto; /* Ensure margin on all sides */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow for subtlety */
+    }
+
+    .profile-picture {
+        width: 150px; /* Smaller image size */
+        height: 150px;
+    }
+
+   
+
+    .app-bar {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .app-bar .logo a {
+        margin-bottom: 10px; /* Space between logo and nav */
+    }
+}
+
+
+/* Additional Media Query for Very Small Screens */
+@media screen and (max-width: 480px) {
+    .profile-header h1 {
+        font-size: 2.5em;
+    }
+}
+/* Additional Media Query for Very Small Screens */
+@media screen and (max-width: 300px) {
+    .app-bar nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    .app-bar nav ul li {
+      margin: 5px 0; /* Reduce margin between nav items */
+    }
+
+    .app-bar nav ul li a {
+        font-size: 16px; /* Adjust font size for readability */
+        padding: 3px 7px; /* Adjust padding */
+    }
+}
