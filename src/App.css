@@ -36,3 +36,109 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url("https://i.pinimg.com/736x/d8/17/49/d817491c57219b3727866ada5ec6b7c2.jpg");
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10
+}
+
+.profile-picture {
+  width: 200px; /* Adjust the size as needed */
+  height: 200px; /* Adjust the size as needed */
+  border-radius: 50%; /* Circular image */
+  border: 5px solid #ff66cc; /* Pink border */
+  box-shadow: 0 0 10px #ff66cc; /* Soft glow effect */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+  display: block;
+  margin: 20px auto; /* Centers the image in the container */
+}
+
+.profile-header {
+  background-color: #ff99cc; /* Light pink background */
+  color: #ffffff; /* White text */
+  padding: 20px;
+  text-align: center;
+  border-top-left-radius: 15px; /* Rounded corners to match the profile container */
+  border-top-right-radius: 15px;
+  box-shadow: 0 8px 6px -6px #888; /* Subtle shadow for depth */
+  position: relative; /* For any positioned children */
+}
+
+.profile-header h1 {
+  font-family: 'Brush Script MT', cursive; /* Stylish font */
+  font-size: 4em; /* Large text size */
+  margin: 0;
+  color: #ff66ff; /* A different shade for contrast */
+  text-shadow: 2px 2px 4px #000000; /* Text shadow for depth */
+}
+
+.profile-header p {
+  font-family: 'Courier New', monospace;
+  font-size: 1.2em;
+  margin-top: 10px;
+  font-weight: 4000;
+  color: blue;
+}
+
+.app-bar {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 15px;
+  background-color: #ff66cc; /* Vibrant pink background */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 3px solid pink; /* Bright yellow border */
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.6); /* Soft pink shadow */
+}
+
+.app-bar .logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+  font-family: 'Pacifico', cursive; /* Fun, cursive font */
+  text-shadow: 2px 2px 2px pink; /* Text shadow for depth */
+}
+
+.app-bar nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.app-bar nav ul li {
+  margin-left: 20px;
+}
+
+.app-bar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  background-color: #ff99ff; /* Lighter pink for contrast */
+  padding: 5px 10px;
+  border-radius: 10px; /* Rounded edges */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.app-bar nav ul li a:hover {
+  background-color: #ffccf9; /* Light pink on hover */
+  text-decoration: underline;
+  color: #ff66cc;
+}
