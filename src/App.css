@@ -46,18 +46,26 @@ body {
   text-align: center;
 }
 
+.glowy-outer{
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 10px 5px #ff66cc, /* Inner soft glow */
+              0 0 20px 10px #ff99ff, /* Middle glow */
+              0 0 30px 15px #ffccf9; /* Outermost glow */
+}
+
 .profile-container {
   max-width: 800px;
   margin: 0 auto;
   background-color: #fff;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 0 10
+  box-shadow: 0 0 10;
 }
 
 .profile-picture {
-  width: 200px; /* Adjust the size as needed */
-  height: 200px; /* Adjust the size as needed */
+  width: 35%; /* Adjust the size as needed */
+  height: 35%; /* Adjust the size as needed */
   border-radius: 50%; /* Circular image */
   border: 5px solid #ff66cc; /* Pink border */
   box-shadow: 0 0 10px #ff66cc; /* Soft glow effect */
@@ -67,14 +75,19 @@ body {
 }
 
 .profile-header {
-  background-color: #ff99cc; /* Light pink background */
   color: #ffffff; /* White text */
-  padding: 20px;
   text-align: center;
   border-top-left-radius: 15px; /* Rounded corners to match the profile container */
   border-top-right-radius: 15px;
   box-shadow: 0 8px 6px -6px #888; /* Subtle shadow for depth */
-  position: relative; /* For any positioned children */
+  position: relative;
+  background-color: #ffccf9; /* Soft pink background */
+  border: 3px solid #ff99ff; /* Brighter pink border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px;
+  max-width: 800px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.6); /* Soft pink shadow for depth */
+  text-align: center; /* For any positioned children */
 }
 
 .profile-header h1 {
@@ -95,7 +108,7 @@ body {
 
 .app-bar {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 25px auto;
   border-radius: 15px;
   background-color: #ff66cc; /* Vibrant pink background */
   color: white;
@@ -107,12 +120,16 @@ body {
   box-shadow: 0 4px 8px rgba(255, 105, 180, 0.6); /* Soft pink shadow */
 }
 
-.app-bar .logo a {
+.app-bar .logo a, h2 {
   color: white;
   text-decoration: none;
   font-size: 28px;
   font-family: 'Pacifico', cursive; /* Fun, cursive font */
   text-shadow: 2px 2px 2px pink; /* Text shadow for depth */
+}
+
+h2 {
+  color: #ff66cc;
 }
 
 .app-bar nav ul {
@@ -154,13 +171,6 @@ body {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow for subtlety */
     }
 
-    .profile-picture {
-        width: 150px; /* Smaller image size */
-        height: 150px;
-    }
-
-   
-
     .app-bar {
         flex-direction: column; /* Stack items vertically */
         padding: 10px; /* Reduce padding */
@@ -170,7 +180,6 @@ body {
         margin-bottom: 10px; /* Space between logo and nav */
     }
 }
-
 
 /* Additional Media Query for Very Small Screens */
 @media screen and (max-width: 480px) {
@@ -193,3 +202,30 @@ body {
         padding: 3px 7px; /* Adjust padding */
     }
 }
+
+.content-box {
+  background-color: #ffccf9; /* Soft pink background */
+  border: 3px solid #ff99ff; /* Brighter pink border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px;
+  margin: 20px 5%;
+  max-width: 800px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.6); /* Soft pink shadow for depth */
+  text-align: center;
+}
+
+.content-box h2 {
+  color: #ff66cc; /* Vibrant pink color */
+  font-family: 'Brush Script MT', cursive; /* Cursive, decorative font */
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px #ff99ff; /* Subtle text shadow */
+}
+
+.content-box p {
+  font-family: 'Arial', sans-serif;
+  color: #333; /* Darker text for readability */
+  font-size: 1.2em;
+  line-height: 1.5; /* Improved line spacing for readability */
+}
+

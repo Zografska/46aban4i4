@@ -7,7 +7,7 @@ import './App.css';
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="app-bar">
+      <div className="app-bar glowy-outer">
         <div className="logo">
             <a href="#">MyGlamSite 😘</a>
         </div>
