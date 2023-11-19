@@ -246,3 +246,10 @@ h2 {
   height: 352px;
   padding: 5px;
 }
+
+.sparkle {
+  position: fixed;
+  z-index: 6;
+  opacity: 0.5;
+  pointer-events: none;
+}

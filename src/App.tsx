@@ -6,7 +6,15 @@ import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import SoundBoard from './components/SoundBoard';
 import Music from './components/Music';
+import { trailAnimation } from './cursor';
+let trailArr = [1, .9, .8, .5, .25, .6, .4, .3, .2];
 
+window.addEventListener('mousemove', function (e) {
+  trailArr.forEach((i) => {trailAnimation(e, i)});
+
+  let maxYTranslation = '80';
+  trailArr.forEach((i) => {trailAnimation(e, i, maxYTranslation)});
+}, false);
 
 const App: React.FC = () => {
   return (
