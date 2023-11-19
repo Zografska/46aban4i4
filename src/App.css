@@ -151,17 +151,21 @@ h2 {
   background-color: #ff99ff; /* Lighter pink for contrast */
   padding: 5px 10px;
   border-radius: 10px; /* Rounded edges */
-  transition: background-color 0.3s; /* Smooth transition for hover */
+  transition: background-color 0.3s;  /*transform 0.3s ease, text-shadow 0.3s ease; Smooth transition for hover */
 }
 
 .app-bar nav ul li a:hover {
   background-color: #ffccf9; /* Light pink on hover */
   text-decoration: underline;
   color: #ff66cc;
-}
 
-/* Existing Styles */
-/* ... (keep your existing styles here) ... */
+  /* ne rabote v*/
+  transform: scale(1.1); /* Slightly enlarge the text */
+  text-shadow: 0 0 8px #ffffff, /* White glow */
+                 0 0 15px #ffccff, /* Light pink glow */
+                 0 0 20px #ff99ff; /* Darker pink glow */
+                 
+}
 
 /* Responsive Styling */
 @media screen and (max-width: 768px) {
