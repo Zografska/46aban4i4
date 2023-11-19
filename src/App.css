@@ -253,3 +253,115 @@ h2 {
   opacity: 0.5;
   pointer-events: none;
 }
+
+.compatibility-form-container {
+  background-color: #ffffff;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.7);
+  width: 80%;
+  max-width: 500px;
+}
+
+/* .compatibility-form-container h1 {
+  color: #ff66cc;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2em;
+  margin-bottom: 20px;
+} */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ff66cc;
+  font-size: 1.5em;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.form-group {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 2px solid #ff99ff;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  background-color: #ff66cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 2em;
+  cursor: pointer;
+  font-family: 'Brush Script MT', cursive;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff99ff;
+}
+
+#result {
+  margin-top: 20px;
+  color: #ff66cc;
+  font-size: 1.2em;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.neon {
+  font-size: 2.5em;
+  color: #ff66cc; /* Base color for the neon effect */
+  animation: neon-sign-flicker 3s infinite;
+  margin: 20 px
+}
+
+@keyframes neon-sign-flicker {
+  0%, 100% {
+      text-shadow:
+          0 0 5px #ff66cc,
+          0 0 10px #ff66cc,
+          0 0 15px #ff66cc,
+          0 0 20px #ff99ff,
+          0 0 35px #ff99ff,
+          0 0 40px #ff99ff,
+          0 0 50px #ff99ff,
+          0 0 75px #ff99ff;
+      opacity: 1;
+  }
+  10%, 30%, 50%, 70%, 90% {
+      text-shadow:
+          0 0 2px #ff66cc,
+          0 0 4px #ff66cc,
+          0 0 6px #ff66cc,
+          0 0 10px #ff99ff,
+          0 0 15px #ff99ff,
+          0 0 20px #ff99ff,
+          0 0 25px #ff99ff,
+          0 0 30px #ff99ff;
+      opacity: 0.75;
+  }
+  20%, 40%, 60%, 80% {
+      text-shadow:
+          0 0 3px #ff66cc,
+          0 0 6px #ff66cc,
+          0 0 9px #ff66cc,
+          0 0 12px #ff99ff,
+          0 0 18px #ff99ff,
+          0 0 22px #ff99ff,
+          0 0 28px #ff99ff,
+          0 0 35px #ff99ff;
+      opacity: 0.85;
+  }
+}
+
+.neon-h2 {
+  font-size: 2.5em;
+  color: #ff66cc; /* Base color for the neon effect */
+  animation: neon-sign-flicker 3s infinite;
+}
