@@ -54,6 +54,14 @@ body {
               0 0 30px 15px #ffccf9; /* Outermost glow */
 }
 
+.darker-background {
+  background-color: #c10080 !important;
+}
+
+.profile-content{
+  padding: 10px;
+}
+
 .profile-container {
   max-width: 800px;
   margin: 0 auto;
@@ -192,7 +200,7 @@ h2 {
     }
 }
 /* Additional Media Query for Very Small Screens */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 410px) {
     .app-bar nav ul {
       flex-direction: column;
       align-items: center;
@@ -233,3 +241,8 @@ h2 {
   line-height: 1.5; /* Improved line spacing for readability */
 }
 
+.spotify-playlist {
+  width: 352px;
+  height: 352px;
+  padding: 5px;
+}
