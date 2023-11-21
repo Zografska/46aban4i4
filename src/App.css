@@ -365,3 +365,33 @@ button:hover {
   color: #ff66cc; /* Base color for the neon effect */
   animation: neon-sign-flicker 3s infinite;
 }
+
+.gantt-chart {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid #ff99ff;
+  border-radius: 10px;
+}
+
+.gantt-row {
+  height: 40px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.task {
+  height: 100%;
+  background-color: #ff66cc;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  line-height: 40px; /* Same as the height of .gantt-row for vertical centering */
+  font-family: 'Brush Script MT', cursive;
+}
+

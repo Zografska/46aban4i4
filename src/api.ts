@@ -1,6 +1,14 @@
 import axios from 'axios';
 
-export async function getCompatibility(name: string, date: string) : Promise<string> {
+export interface HoroscopeResult {
+    love: number
+    intellectual: number
+    physical: number
+    strength: number
+    bad: number
+}
+
+export async function getCompatibility(name: string, date: string) : Promise<HoroscopeResult | null> {
 
     try {
         const response = await axios.request({
@@ -14,12 +22,11 @@ export async function getCompatibility(name: string, date: string) : Promise<str
             'X-RapidAPI-Host': 'starlovematch.p.rapidapi.com'
         }
         });
-        console.log(response.data);
 
         debugger
-        return "ok"
+        return response.data[0] as HoroscopeResult
     } catch (error) {
         console.error(error);
-        return ""
+        return null
     }
 }

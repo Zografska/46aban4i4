@@ -1,12 +1,12 @@
 
 import React, { useCallback, useState } from 'react';
-import { getCompatibility } from '../api';
+import { HoroscopeResult, getCompatibility } from '../api';
 
 const Horoscope: React.FC = () => {
 
     const [name, setName] = useState("")
     const [showValidation, setShowValidation] = useState(false)
-    const [result, setResult] = useState("")
+    const [result, setResult] = useState<HoroscopeResult | null>(null)
     const [date, setDate] = useState("")
 
     const onClick = useCallback(():void => {
@@ -27,12 +27,10 @@ const Horoscope: React.FC = () => {
 
         const formatted = `${month}/${day}/${year}`
         getCompatibility(name, formatted).then(response => {
-            // console.log(response[0])
-            // TODO: add response
-            setResult(response[0])
+            setResult(response)
         })
         
-    }, [date, name, showValidation, result])
+    }, [date, name, showValidation])
 
     return (
         <div className="compatibility-form-container">
@@ -50,7 +48,24 @@ const Horoscope: React.FC = () => {
                 <button type="submit" onClick={onClick}>Test Compatibility</button>
             </div>
             <div>
-            <h2>{result}</h2>
+            {result ? 
+            <div className="gantt-chart">
+              {
+                Object.keys(result).map(key => {
+                    const value = result[key as keyof HoroscopeResult]
+                    if(key === "name")
+                    {
+                        return <h2 className='result'>{key}: {value}</h2>
+                    }
+                    return  <div className="gantt-row">
+                    <div className="task" key={key} style={{width: `${value *10}%`}}>{key}</div>
+                </div>
+                })
+              }
+            </div> 
+            :
+             <div></div>}
+
             </div>
         </div>
     );
