@@ -39,6 +39,16 @@ const App: React.FC = () => {
         <Route path="/horoscope" Component={Horoscope} />
         <Route path="/music" Component={Music} />
       </Routes>
+      <footer className="app-bar">
+        <div className="logo">
+            <a href="/"> </a>
+        </div>
+        <nav>
+            <ul>
+                <div className='logo'> <a href="https://www.youtube.com/watch?v=tXuewJ5CDgw">XOXO 💋</a></div>
+            </ul>
+        </nav>
+      </footer>
     </Router>
   );
 };
