@@ -11,8 +11,7 @@ const Home: React.FC = () => {
             <p>Architect 📏 | Artist 👩‍🎨 | Dreamer 💭</p>
         </header>
         <div className="profile-content">
-            <img src="https://scontent.fskp2-1.fna.fbcdn.net/v/t39.30808-6/316130438_1162303184702924_6056116119267912746_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=lLuKBVkoiS0AX_siPUz&_nc_ht=scontent.fskp2-1.fna&oh=00_AfAZds3B2t66R8nruZhUULic7eNDELpC5-p7XdMl9-VcHg&oe=655DB46E"
-            className="profile-picture"/>
+            <img src={require('../profile.jpeg')} className="profile-picture"/>
             <div className="content-box">
                 <h2>About Me</h2>
                 <h2>Title: "Eva's Serene Journey: A Story of Friendship and Creativity"</h2>
